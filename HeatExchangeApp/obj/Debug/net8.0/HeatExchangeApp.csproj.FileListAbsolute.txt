@@ -36,3 +36,4 @@ E:\Металлы\HeatExchangeApp\HeatExchangeApp\obj\Debug\net8.0\HeatExchangeA
 E:\Металлы\HeatExchangeApp\HeatExchangeApp\obj\Debug\net8.0\HeatExchangeApp.genruntimeconfig.cache
 E:\Металлы\HeatExchangeApp\HeatExchangeApp\obj\Debug\net8.0\ref\HeatExchangeApp.dll
 E:\Металлы\HeatExchangeApp\HeatExchangeApp\bin\Debug\net8.0\Data\calculations.json
+E:\Металлы\HeatExchangeApp\HeatExchangeApp\obj\Debug\net8.0\HeatExchangeApp.sourcelink.json

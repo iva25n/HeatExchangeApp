@@ -70,20 +70,15 @@ namespace HeatExchangeApp.Web.Controllers
         [HttpGet]
         public IActionResult GetCalculation(Guid id)
         {
-            var calculation = _storage.GetCalculation(id);
-            if (calculation == null)
-                return NotFound();
-
-            return Json(calculation);
-        }
-
-        [HttpPost]
-        public IActionResult DeleteCalculation(Guid id)
-        {
             try
             {
-                _storage.DeleteCalculation(id);
-                return Json(new { success = true });
+                var calculation = _storage.GetCalculation(id);
+                if (calculation == null)
+                {
+                    return Json(new { success = false, error = "Расчет не найден" });
+                }
+
+                return Json(calculation);
             }
             catch (Exception ex)
             {
@@ -91,18 +86,61 @@ namespace HeatExchangeApp.Web.Controllers
             }
         }
 
+        [HttpPost]
+        public IActionResult DeleteCalculation(Guid id)  
+        {
+            try
+            {
+                Console.WriteLine($"Удаление расчета: {id}");
+                _storage.DeleteCalculation(id);
+                return Json(new { success = true, message = "Расчет удален" });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка удаления: {ex.Message}");
+                return Json(new { success = false, error = ex.Message });
+            }
+        }
+
         [HttpGet]
         public IActionResult ExportToCsv(Guid id)
         {
-            var calculation = _storage.GetCalculation(id);
-            if (calculation == null)
-                return NotFound();
+            try
+            {
+                var calculation = _storage.GetCalculation(id);
+                if (calculation == null)
+                    return NotFound();
 
-            var csv = GenerateCsv(calculation);
-            var bytes = Encoding.UTF8.GetBytes(csv);
 
-            return File(bytes, "text/csv", $"calculation_{id}.csv");
+                var csv = new StringBuilder();
+
+
+                byte[] bom = Encoding.UTF8.GetPreamble();
+                var stream = new MemoryStream();
+                stream.Write(bom, 0, bom.Length);
+
+
+                csv.AppendLine("Высота (м);Температура материала (°C);Температура газа (°C);Разность температур (°C)");
+
+
+                var result = calculation.Result;
+                for (int i = 0; i < result.Heights.Count; i++)
+                {
+                    csv.AppendLine($"{result.Heights[i]:F3};{result.MaterialTemperatures[i]:F1};{result.GasTemperatures[i]:F1};{result.TemperatureDifferences[i]:F1}");
+                }
+
+
+                byte[] csvBytes = Encoding.UTF8.GetBytes(csv.ToString());
+                stream.Write(csvBytes, 0, csvBytes.Length);
+
+                return File(stream.ToArray(), "text/csv; charset=utf-8", $"calculation_{calculation.Name.Replace(" ", "_")}.csv");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Ошибка при создании CSV файла: {ex.Message}");
+            }
         }
+
 
         [HttpGet]
         public IActionResult ExportAll()

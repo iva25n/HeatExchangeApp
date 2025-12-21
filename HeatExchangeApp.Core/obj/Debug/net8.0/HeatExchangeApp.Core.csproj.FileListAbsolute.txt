@@ -21,3 +21,4 @@ E:\Металлы\HeatExchangeApp\HeatExchangeApp\HeatExchangeApp.Core\obj\Debug
 E:\Металлы\HeatExchangeApp\HeatExchangeApp\HeatExchangeApp.Core\obj\Debug\net8.0\refint\HeatExchangeApp.Core.dll
 E:\Металлы\HeatExchangeApp\HeatExchangeApp\HeatExchangeApp.Core\obj\Debug\net8.0\HeatExchangeApp.Core.pdb
 E:\Металлы\HeatExchangeApp\HeatExchangeApp\HeatExchangeApp.Core\obj\Debug\net8.0\ref\HeatExchangeApp.Core.dll
+E:\Металлы\HeatExchangeApp\HeatExchangeApp.Core\obj\Debug\net8.0\HeatExchangeApp.Core.sourcelink.json

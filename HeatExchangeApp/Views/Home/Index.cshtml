@@ -143,8 +143,17 @@
                                             <small>@calc.CreatedAt.ToString("dd.MM.yyyy HH:mm")</small>
                                         </div>
                                         <div>
-                                            <button class="btn btn-sm btn-outline-primary" onclick="loadCalculation('@calc.Id')">Загрузить</button>
+                                            <button class="btn btn-outline-primary btn-sm"
+                                                    onclick="loadCalculation('@calc.Id.ToString()')"
+                                                    title="Загрузить">
+                                                Загрузить
+                                            </button>
                                             <button class="btn btn-sm btn-outline-success" onclick="exportCalculation('@calc.Id')">CSV</button>
+                                            <button class="btn btn-outline-danger btn-sm"
+                                                    onclick="deleteCalculation('@calc.Id')"
+                                                    title="Удалить">
+                                                Удалить
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -443,6 +452,35 @@
             if (confirm('Сбросить все поля?')) {
                 $('#calculationForm')[0].reset();
             }
+        }
+                function deleteCalculation(id) {
+            if (!confirm('Вы уверены, что хотите удалить этот расчет?')) {
+                return;
+            }
+
+            console.log('Удаление расчета с ID:', id);
+
+            
+            $.ajax({
+                url: '@Url.Action("DeleteCalculation", "Home")?id=' + id,
+                type: 'POST',
+                success: function(response) {
+                    console.log('Ответ сервера:', response);
+                    if (response.success) {
+                        alert('Расчет успешно удален');
+                       
+                        $('[data-id="' + id + '"]').remove();
+                        
+                        updateCalculationsList();
+                    } else {
+                        alert('Ошибка удаления: ' + (response.error || 'Неизвестная ошибка'));
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.error('Ошибка AJAX:', error);
+                    alert('Ошибка соединения: ' + error);
+                }
+            });
         }
     </script>
 }
