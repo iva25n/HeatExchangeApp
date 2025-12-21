@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36811.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatExchangeApp", "HeatExchangeApp\HeatExchangeApp.csproj", "{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HeatExchangeApp.Core", "HeatExchangeApp.Core\HeatExchangeApp.Core.csproj", "{CF01823D-8474-46F5-883C-0715166D46A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF01823D-8474-46F5-883C-0715166D46A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF01823D-8474-46F5-883C-0715166D46A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF01823D-8474-46F5-883C-0715166D46A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF01823D-8474-46F5-883C-0715166D46A7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D1D863BF-8901-4E9D-951F-F68C694CD175}
+	EndGlobalSection
+EndGlobal

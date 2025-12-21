@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "HeatExchangeApp/1.0.0": {
+        "dependencies": {
+          "HeatExchangeApp.Core": "1.0.0"
+        },
+        "runtime": {
+          "HeatExchangeApp.dll": {}
+        }
+      },
+      "HeatExchangeApp.Core/1.0.0": {
+        "runtime": {
+          "HeatExchangeApp.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "HeatExchangeApp/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HeatExchangeApp.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
