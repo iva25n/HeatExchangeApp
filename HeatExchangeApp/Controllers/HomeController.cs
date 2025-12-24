@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Mvc;
+п»їusing Microsoft.AspNetCore.Mvc;
 using HeatExchangeApp.Core.Models;
 using HeatExchangeApp.Core.Services;
 using HeatExchangeApp.Web.Models;
@@ -26,7 +26,6 @@ namespace HeatExchangeApp.Web.Controllers
                 Request = new CalculationRequest(),
                 SavedCalculations = _storage.GetAllCalculations()
             };
-
             return View(model);
         }
 
@@ -36,6 +35,7 @@ namespace HeatExchangeApp.Web.Controllers
             try
             {
                 var result = _calculator.Calculate(request);
+
                 var savedCalc = new SavedCalculation
                 {
                     Id = Guid.NewGuid(),
@@ -43,7 +43,7 @@ namespace HeatExchangeApp.Web.Controllers
                     Gas = request.Gas,
                     Parameters = request.Parameters,
                     Name = request.Name,
-                    Description = request.Description,
+                    Description = $"Р Р°СЃС‡РµС‚ РїРѕ РјРµС‚РѕРґРёРєРµ РЈСЂР¤РЈ. {result.Description}",
                     Result = result,
                     CreatedAt = DateTime.Now
                 };
@@ -53,17 +53,26 @@ namespace HeatExchangeApp.Web.Controllers
                 return Json(new
                 {
                     success = true,
-                    result = result,
+                    result = new
+                    {
+                        heights = result.Heights,
+                        materialTemperatures = result.MaterialTemperatures,
+                        gasTemperatures = result.GasTemperatures,
+                        temperatureDifferences = result.TemperatureDifferences,
+                        heatTransferCoefficient = result.HeatTransferCoefficient,
+                        totalHeatTransfer = result.TotalHeatTransfer,
+                        efficiency = result.Efficiency,
+                        methodDescription = result.Description,
+                        alphaV = request.Parameters.VolumeHeatTransferCoefficient,
+                        materialFlowRate_kg_s = request.Parameters.MaterialFlowRate / 3600,
+                        gasFlowRate_kg_s = request.Parameters.GasFlowRate / 3600
+                    },
                     id = savedCalc.Id
                 });
             }
             catch (Exception ex)
             {
-                return Json(new
-                {
-                    success = false,
-                    error = ex.Message
-                });
+                return Json(new { success = false, error = ex.Message });
             }
         }
 
@@ -75,9 +84,8 @@ namespace HeatExchangeApp.Web.Controllers
                 var calculation = _storage.GetCalculation(id);
                 if (calculation == null)
                 {
-                    return Json(new { success = false, error = "Расчет не найден" });
+                    return Json(new { success = false, error = "Р Р°СЃС‡РµС‚ РЅРµ РЅР°Р№РґРµРЅ" });
                 }
-
                 return Json(calculation);
             }
             catch (Exception ex)
@@ -87,19 +95,24 @@ namespace HeatExchangeApp.Web.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteCalculation(Guid id)  
+        public IActionResult DeleteCalculation([FromBody] DeleteRequest deleteRequest) 
         {
             try
             {
-                Console.WriteLine($"Удаление расчета: {id}");
-                _storage.DeleteCalculation(id);
-                return Json(new { success = true, message = "Расчет удален" });
+                Console.WriteLine($"РЈРґР°Р»РµРЅРёРµ СЂР°СЃС‡РµС‚Р°: {deleteRequest.Id}");
+                _storage.DeleteCalculation(deleteRequest.Id);
+                return Json(new { success = true, message = "Р Р°СЃС‡РµС‚ СѓРґР°Р»РµРЅ" });
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Ошибка удаления: {ex.Message}");
+                Console.WriteLine($"РћС€РёР±РєР° СѓРґР°Р»РµРЅРёСЏ: {ex.Message}");
                 return Json(new { success = false, error = ex.Message });
             }
+        }
+
+        public class DeleteRequest
+        {
+            public Guid Id { get; set; }
         }
 
         [HttpGet]
@@ -111,17 +124,12 @@ namespace HeatExchangeApp.Web.Controllers
                 if (calculation == null)
                     return NotFound();
 
-
                 var csv = new StringBuilder();
-
-
                 byte[] bom = Encoding.UTF8.GetPreamble();
                 var stream = new MemoryStream();
                 stream.Write(bom, 0, bom.Length);
 
-
-                csv.AppendLine("Высота (м);Температура материала (°C);Температура газа (°C);Разность температур (°C)");
-
+                csv.AppendLine("Р’С‹СЃРѕС‚Р° (Рј);РўРµРјРїРµСЂР°С‚СѓСЂР° РјР°С‚РµСЂРёР°Р»Р° (В°C);РўРµРјРїРµСЂР°С‚СѓСЂР° РіР°Р·Р° (В°C);Р Р°Р·РЅРѕСЃС‚СЊ С‚РµРјРїРµСЂР°С‚СѓСЂ (В°C)");
 
                 var result = calculation.Result;
                 for (int i = 0; i < result.Heights.Count; i++)
@@ -129,18 +137,17 @@ namespace HeatExchangeApp.Web.Controllers
                     csv.AppendLine($"{result.Heights[i]:F3};{result.MaterialTemperatures[i]:F1};{result.GasTemperatures[i]:F1};{result.TemperatureDifferences[i]:F1}");
                 }
 
-
                 byte[] csvBytes = Encoding.UTF8.GetBytes(csv.ToString());
                 stream.Write(csvBytes, 0, csvBytes.Length);
 
-                return File(stream.ToArray(), "text/csv; charset=utf-8", $"calculation_{calculation.Name.Replace(" ", "_")}.csv");
+                return File(stream.ToArray(), "text/csv; charset=utf-8",
+                    $"calculation_{calculation.Name.Replace(" ", "_")}.csv");
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Ошибка при создании CSV файла: {ex.Message}");
+                return StatusCode(500, $"РћС€РёР±РєР° РїСЂРё СЃРѕР·РґР°РЅРёРё CSV С„Р°Р№Р»Р°: {ex.Message}");
             }
         }
-
 
         [HttpGet]
         public IActionResult ExportAll()
@@ -148,23 +155,8 @@ namespace HeatExchangeApp.Web.Controllers
             var calculations = _storage.GetAllCalculations();
             var json = System.Text.Json.JsonSerializer.Serialize(calculations,
                 new System.Text.Json.JsonSerializerOptions { WriteIndented = true });
-
             var bytes = Encoding.UTF8.GetBytes(json);
             return File(bytes, "application/json", "all_calculations.json");
-        }
-
-        private string GenerateCsv(SavedCalculation calculation)
-        {
-            var result = calculation.Result;
-            var csv = new StringBuilder();
-            csv.AppendLine("Высота (м),Температура материала (°C),Температура газа (°C),Разность температур (°C)");
-
-            for (int i = 0; i < result.Heights.Count; i++)
-            {
-                csv.AppendLine($"{result.Heights[i]:F3},{result.MaterialTemperatures[i]:F1},{result.GasTemperatures[i]:F1},{result.TemperatureDifferences[i]:F1}");
-            }
-
-            return csv.ToString();
         }
     }
 }

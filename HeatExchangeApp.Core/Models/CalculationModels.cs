@@ -30,6 +30,8 @@ namespace HeatExchangeApp.Core.Models
         public double MaterialInletTemp { get; set; } = 20; // °C
         public double GasInletTemp { get; set; } = 800; // °C
         public int CalculationSteps { get; set; } = 100;
+
+        public double VolumeHeatTransferCoefficient { get; set; } = 2460; // Вт/(м³·°C)
     }
 
     public class CalculationResult
@@ -38,10 +40,13 @@ namespace HeatExchangeApp.Core.Models
         public List<double> MaterialTemperatures { get; set; } = new List<double>();
         public List<double> GasTemperatures { get; set; } = new List<double>();
         public List<double> TemperatureDifferences { get; set; } = new List<double>();
-        public double HeatTransferCoefficient { get; set; }
+
+        public double HeatTransferCoefficient { get; set; } // Вт/(м·°C) или Вт/(м³·°C)
         public double TotalHeatTransfer { get; set; } // Вт
         public double Efficiency { get; set; } // %
         public DateTime CalculationTime { get; set; }
+
+        public string Description { get; set; } = string.Empty;
     }
 
     public class CalculationRequest
@@ -49,6 +54,7 @@ namespace HeatExchangeApp.Core.Models
         public MaterialProperties Material { get; set; } = new MaterialProperties();
         public GasProperties Gas { get; set; } = new GasProperties();
         public LayerParameters Parameters { get; set; } = new LayerParameters();
+
         public string Name { get; set; } = "Новый расчет";
         public string Description { get; set; } = string.Empty;
     }

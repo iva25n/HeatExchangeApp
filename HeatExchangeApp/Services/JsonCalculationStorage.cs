@@ -1,8 +1,9 @@
-﻿using HeatExchangeApp.Core.Models;
+﻿using HeatExchangeApp.Core.Models; 
 using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 
 namespace HeatExchangeApp.Web.Services
@@ -50,7 +51,6 @@ namespace HeatExchangeApp.Web.Services
             {
                 _calculations.Remove(existing);
             }
-
             _calculations.Add(calculation);
             SaveCalculations();
         }

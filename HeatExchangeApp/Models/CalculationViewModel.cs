@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using HeatExchangeApp.Core.Models;
+using HeatExchangeApp.Core.Models; 
 
 namespace HeatExchangeApp.Web.Models
 {

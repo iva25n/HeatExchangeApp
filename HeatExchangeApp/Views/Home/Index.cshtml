@@ -1,5 +1,4 @@
 ﻿@model HeatExchangeApp.Web.Models.CalculationViewModel
-
 @{
     ViewData["Title"] = "Расчет теплообмена в противоточном слое";
 }
@@ -18,7 +17,7 @@
                             <label class="form-label">Название расчета</label>
                             <input type="text" class="form-control" asp-for="Request.Name" />
                         </div>
-
+                        
                         <h6>Параметры материала</h6>
                         <div class="row mb-2">
                             <div class="col-6">
@@ -46,7 +45,7 @@
                                 <input type="number" class="form-control" asp-for="Request.Material.Porosity" />
                             </div>
                         </div>
-
+                        
                         <h6>Параметры газа</h6>
                         <div class="row mb-2">
                             <div class="col-6">
@@ -74,8 +73,18 @@
                                 <input type="number" class="form-control" asp-for="Request.Gas.ThermalConductivity" />
                             </div>
                         </div>
-
+                        
                         <h6>Параметры слоя</h6>
+                        <!-- Поле для αv -->
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                <label class="form-label small">Объемный коэф. теплоотдачи αv, Вт/(м³·°C)</label>
+                                <input type="number" class="form-control" 
+                                       asp-for="Request.Parameters.VolumeHeatTransferCoefficient" 
+                                       value="2460" step="10" />
+                            </div>
+                        </div>
+                        
                         <div class="row mb-2">
                             <div class="col-6">
                                 <label class="form-label small">Высота, м</label>
@@ -112,12 +121,12 @@
                                 <input type="number" class="form-control" asp-for="Request.Parameters.CalculationSteps" />
                             </div>
                         </div>
-
+                        
                         <div class="mb-3">
                             <label class="form-label">Описание</label>
                             <textarea class="form-control" asp-for="Request.Description" rows="2"></textarea>
                         </div>
-
+                        
                         <div class="d-grid gap-2">
                             <button type="submit" class="btn btn-primary">Выполнить расчет</button>
                             <button type="button" class="btn btn-secondary" onclick="resetForm()">Сбросить</button>
@@ -125,7 +134,8 @@
                     </form>
                 </div>
             </div>
-
+            
+            <!-- Сохраненные расчеты -->
             <div class="card mt-3">
                 <div class="card-header bg-secondary text-white">
                     <h5>Сохраненные расчеты</h5>
@@ -136,7 +146,7 @@
                         {
                             @foreach (var calc in Model.SavedCalculations)
                             {
-                                <div class="border p-2 mb-2">
+                                <div class="border p-2 mb-2" data-calculation-id="@calc.Id">
                                     <div class="d-flex justify-content-between">
                                         <div>
                                             <strong>@calc.Name</strong><br>
@@ -167,7 +177,7 @@
                 </div>
             </div>
         </div>
-
+        
         <!-- Правая колонка - Результаты -->
         <div class="col-md-8">
             <div class="card">
@@ -176,13 +186,14 @@
                 </div>
                 <div class="card-body">
                     <div id="resultsContainer" style="display: none;">
+                        
                         <!-- Основные метрики -->
                         <div class="row mb-3">
                             <div class="col-md-3">
                                 <div class="text-center p-2 border">
                                     <div class="small">Коэф. теплообмена</div>
                                     <div class="h5" id="heatTransferCoefficient">0</div>
-                                    <div class="small">Вт/(м²·°C)</div>
+                                    <div class="small">Вт/(м³·°C)</div>
                                 </div>
                             </div>
                             <div class="col-md-3">
@@ -209,7 +220,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                         <!-- Графики -->
                         <div class="row mb-3">
                             <div class="col-md-12">
@@ -219,7 +230,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="row mb-3">
                             <div class="col-md-12">
                                 <div class="border p-2">
@@ -228,7 +238,7 @@
                                 </div>
                             </div>
                         </div>
-
+                        
                         <!-- Таблица -->
                         <div class="row">
                             <div class="col-md-12">
@@ -243,14 +253,13 @@
                                                 <th>Разность, °C</th>
                                             </tr>
                                         </thead>
-                                        <tbody id="resultsTableBody">
-                                        </tbody>
+                                        <tbody id="resultsTableBody"></tbody>
                                     </table>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    
                     <div id="noResultsMessage" class="text-center text-muted p-5">
                         <h4>Нет данных для отображения</h4>
                         <p>Заполните форму и выполните расчет</p>
@@ -266,10 +275,10 @@
     <script>
         let temperatureChart = null;
         let differenceChart = null;
-
+        
         $('#calculationForm').submit(function(e) {
             e.preventDefault();
-
+            
             const formData = {
                 Name: $('#Request_Name').val(),
                 Description: $('#Request_Description').val(),
@@ -288,6 +297,7 @@
                     ThermalConductivity: parseFloat($('#Request_Gas_ThermalConductivity').val())
                 },
                 Parameters: {
+                    VolumeHeatTransferCoefficient: parseFloat($('#Request_Parameters_VolumeHeatTransferCoefficient').val()),
                     Height: parseFloat($('#Request_Parameters_Height').val()),
                     CrossSection: parseFloat($('#Request_Parameters_CrossSection').val()),
                     MaterialFlowRate: parseFloat($('#Request_Parameters_MaterialFlowRate').val()),
@@ -310,6 +320,9 @@
                     } else {
                         alert('Ошибка: ' + response.error);
                     }
+                },
+                error: function(xhr, status, error) {
+                    alert('Ошибка соединения: ' + error);
                 }
             });
         });
@@ -317,17 +330,35 @@
         function displayResults(result) {
             $('#resultsContainer').show();
             $('#noResultsMessage').hide();
-
-            $('#heatTransferCoefficient').text(result.heatTransferCoefficient.toFixed(2));
+            
+            // Очищаем предыдущие алерты
+            $('.alert-info').remove();
+            
+            // Основные метрики
+            $('#heatTransferCoefficient').text(result.heatTransferCoefficient.toFixed(0));
             $('#totalHeatTransfer').text(result.totalHeatTransfer.toFixed(0));
             $('#efficiency').text(result.efficiency.toFixed(1));
             $('#materialOutletTemp').text(result.materialTemperatures[result.materialTemperatures.length - 1].toFixed(1));
             $('#gasOutletTemp').text(result.gasTemperatures[result.gasTemperatures.length - 1].toFixed(1));
-
+            
+            // Дополнительная информация о методике
+            if (result.methodDescription) {
+                $('#resultsContainer').prepend(`
+                    <div class="alert alert-info mb-3">
+                        <small>${result.methodDescription}</small><br>
+                        <small>αv = ${result.alphaV} Вт/(м³·°C) | 
+                        Расход материала = ${result.materialFlowRate_kg_s.toFixed(3)} кг/с | 
+                        Расход газа = ${result.gasFlowRate_kg_s.toFixed(3)} кг/с</small>
+                    </div>
+                `);
+            }
+            
+            // Таблица
             const tableBody = $('#resultsTableBody');
             tableBody.empty();
-
+            
             const step = Math.max(1, Math.floor(result.heights.length / 20));
+            
             for (let i = 0; i < result.heights.length; i += step) {
                 tableBody.append(`
                     <tr>
@@ -338,16 +369,16 @@
                     </tr>
                 `);
             }
-
+            
+            // Графики
             createTemperatureChart(result);
             createDifferenceChart(result);
         }
 
         function createTemperatureChart(result) {
             const ctx = document.getElementById('temperatureChart').getContext('2d');
-
             if (temperatureChart) temperatureChart.destroy();
-
+            
             temperatureChart = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -378,9 +409,8 @@
 
         function createDifferenceChart(result) {
             const ctx = document.getElementById('differenceChart').getContext('2d');
-
             if (differenceChart) differenceChart.destroy();
-
+            
             differenceChart = new Chart(ctx, {
                 type: 'line',
                 data: {
@@ -407,18 +437,26 @@
                 url: '@Url.Action("GetCalculation", "Home")',
                 data: { id: id },
                 success: function(calculation) {
+                    // Заполняем форму
                     $('#Request_Name').val(calculation.name);
                     $('#Request_Description').val(calculation.description);
+                    
+                    // Материал
                     $('#Request_Material_Name').val(calculation.material.name);
                     $('#Request_Material_Density').val(calculation.material.density);
                     $('#Request_Material_SpecificHeat').val(calculation.material.specificHeat);
                     $('#Request_Material_ParticleSize').val(calculation.material.particleSize);
                     $('#Request_Material_Porosity').val(calculation.material.porosity);
+                    
+                    // Газ
                     $('#Request_Gas_Name').val(calculation.gas.name);
                     $('#Request_Gas_Density').val(calculation.gas.density);
                     $('#Request_Gas_SpecificHeat').val(calculation.gas.specificHeat);
                     $('#Request_Gas_Viscosity').val(calculation.gas.viscosity);
                     $('#Request_Gas_ThermalConductivity').val(calculation.gas.thermalConductivity);
+                    
+                    // Параметры
+                    $('#Request_Parameters_VolumeHeatTransferCoefficient').val(calculation.parameters.volumeHeatTransferCoefficient);
                     $('#Request_Parameters_Height').val(calculation.parameters.height);
                     $('#Request_Parameters_CrossSection').val(calculation.parameters.crossSection);
                     $('#Request_Parameters_MaterialFlowRate').val(calculation.parameters.materialFlowRate);
@@ -426,7 +464,8 @@
                     $('#Request_Parameters_MaterialInletTemp').val(calculation.parameters.materialInletTemp);
                     $('#Request_Parameters_GasInletTemp').val(calculation.parameters.gasInletTemp);
                     $('#Request_Parameters_CalculationSteps').val(calculation.parameters.calculationSteps);
-
+                    
+                    // Отображаем результаты
                     displayResults(calculation.result);
                 }
             });
@@ -451,27 +490,41 @@
         function resetForm() {
             if (confirm('Сбросить все поля?')) {
                 $('#calculationForm')[0].reset();
+                // Восстанавливаем значения по умолчанию для αv
+                $('#Request_Parameters_VolumeHeatTransferCoefficient').val(2460);
             }
         }
-                function deleteCalculation(id) {
+
+        function deleteCalculation(id) {
             if (!confirm('Вы уверены, что хотите удалить этот расчет?')) {
                 return;
             }
 
             console.log('Удаление расчета с ID:', id);
-
             
             $.ajax({
-                url: '@Url.Action("DeleteCalculation", "Home")?id=' + id,
+                url: '@Url.Action("DeleteCalculation", "Home")',
                 type: 'POST',
+                contentType: 'application/json',
+                data: JSON.stringify({ id: id }),
                 success: function(response) {
                     console.log('Ответ сервера:', response);
                     if (response.success) {
-                        alert('Расчет успешно удален');
-                       
-                        $('[data-id="' + id + '"]').remove();
+                        // Находим и удаляем элемент с данным ID
+                        const element = $(`[data-calculation-id="${id}"]`);
+                        if (element.length) {
+                            element.remove();
+                        }
                         
+                        // Обновляем список
                         updateCalculationsList();
+                        
+                        // Если список пуст, показываем сообщение
+                        if ($('#savedCalculationsList .border').length === 0) {
+                            $('#savedCalculationsList').html('<p class="text-muted">Нет сохраненных расчетов</p>');
+                        }
+                        
+                        alert('Расчет успешно удален');
                     } else {
                         alert('Ошибка удаления: ' + (response.error || 'Неизвестная ошибка'));
                     }
