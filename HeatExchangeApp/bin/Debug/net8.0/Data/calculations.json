@@ -1,6 +1,6 @@
 [
   {
-    "Id": "43ffac79-4355-416a-b55b-919b1e3e7e0c",
+    "Id": "38f6bc3f-3b4c-4ff6-aebc-7f1efb83f498",
     "Result": {
       "Heights": [
         0,
@@ -417,10 +417,10 @@
       "HeatTransferCoefficient": 2460,
       "TotalHeatTransfer": 0,
       "Efficiency": 0,
-      "CalculationTime": "2025-12-24T19:48:50.476471+03:00",
+      "CalculationTime": "2025-12-25T06:29:51.886824+03:00",
       "Description": "m = 1,791, Y\u2080 = 35,248, \u03B1v = 2460 \u0412\u0442/(\u043C\u00B3\u00B7\u00B0C)"
     },
-    "CreatedAt": "2025-12-24T19:48:50.4766423+03:00",
+    "CreatedAt": "2025-12-25T06:29:51.8876009+03:00",
     "Material": {
       "Name": "\u0416\u0435\u043B\u0435\u0437\u043D\u0430\u044F \u0440\u0443\u0434\u0430",
       "Density": 3500,

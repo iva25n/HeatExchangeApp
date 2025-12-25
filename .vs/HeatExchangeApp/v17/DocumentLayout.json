@@ -3,44 +3,48 @@
   "WorkspaceRootPath": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp.core\\services\\iheatexchangecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|solutionrelative:heatexchangeapp.core\\services\\iheatexchangecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp.core\\services\\heatexchangecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|solutionrelative:heatexchangeapp.core\\services\\heatexchangecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp.core\\models\\calculationmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|solutionrelative:heatexchangeapp.core\\models\\calculationmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\services\\icalculationstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\services\\icalculationstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\services\\jsoncalculationstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\services\\jsoncalculationstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\services\\icalculationstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\services\\icalculationstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp.core\\services\\heatexchangecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|solutionrelative:heatexchangeapp.core\\services\\heatexchangecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp.core\\services\\iheatexchangecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|solutionrelative:heatexchangeapp.core\\services\\iheatexchangecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp.core\\models\\calculationmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|solutionrelative:heatexchangeapp.core\\models\\calculationmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\models\\calculationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\models\\calculationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{CF01823D-8474-46F5-883C-0715166D46A7}|HeatExchangeApp.Core\\HeatExchangeApp.Core.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp.core\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -49,10 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|solutionrelative:heatexchangeapp\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{18AF1E7A-40D6-4B92-B501-F7BD5DC5E7B6}|HeatExchangeApp\\HeatExchangeApp.csproj|e:\\\u043C\u0435\u0442\u0430\u043B\u043B\u044B\\heatexchangeapp\\heatexchangeapp\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -70,76 +70,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "JsonCalculationStorage.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Services\\JsonCalculationStorage.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp\\Services\\JsonCalculationStorage.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Services\\JsonCalculationStorage.cs",
-              "RelativeToolTip": "HeatExchangeApp\\Services\\JsonCalculationStorage.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAwwAAAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:25:18.68Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "HeatExchangeApp\\Views\\Home\\Index.cshtml",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "HeatExchangeApp\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAACMBAAAAAAAAAAAAAO8AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-20T19:33:34.046Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Program.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp\\Program.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Program.cs",
-              "RelativeToolTip": "HeatExchangeApp\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:18:58.94Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CalculationModels.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Models\\CalculationModels.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp.Core\\Models\\CalculationModels.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Models\\CalculationModels.cs",
-              "RelativeToolTip": "HeatExchangeApp.Core\\Models\\CalculationModels.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Title": "ICalculationStorage.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Services\\ICalculationStorage.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp\\Services\\ICalculationStorage.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Services\\ICalculationStorage.cs",
+              "RelativeToolTip": "HeatExchangeApp\\Services\\ICalculationStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:16:21.18Z",
+              "WhenOpened": "2025-12-20T19:23:47.137Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HeatExchangeCalculator.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Services\\HeatExchangeCalculator.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp.Core\\Services\\HeatExchangeCalculator.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Services\\HeatExchangeCalculator.cs",
-              "RelativeToolTip": "HeatExchangeApp.Core\\Services\\HeatExchangeCalculator.cs",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAQwFkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:25:56.196Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "IHeatExchangeCalculator.cs",
               "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Services\\IHeatExchangeCalculator.cs",
               "RelativeDocumentMoniker": "HeatExchangeApp.Core\\Services\\IHeatExchangeCalculator.cs",
@@ -152,85 +100,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ICalculationStorage.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Services\\ICalculationStorage.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp\\Services\\ICalculationStorage.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Services\\ICalculationStorage.cs",
-              "RelativeToolTip": "HeatExchangeApp\\Services\\ICalculationStorage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:23:47.137Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp\\Models\\ErrorViewModel.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "HeatExchangeApp\\Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-24T15:32:51.845Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CalculationViewModel.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Models\\CalculationViewModel.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp\\Models\\CalculationViewModel.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Models\\CalculationViewModel.cs",
-              "RelativeToolTip": "HeatExchangeApp\\Models\\CalculationViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:21:16.704Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp\\Controllers\\HomeController.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "HeatExchangeApp\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAAJcAAAAAAAAAAADwv28AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:32:59.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Class1.cs",
-              "RelativeDocumentMoniker": "HeatExchangeApp.Core\\Class1.cs",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Class1.cs",
-              "RelativeToolTip": "HeatExchangeApp.Core\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-20T19:14:56.67Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "HeatExchangeApp\\Views\\_ViewStart.cshtml",
-              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\_ViewStart.cshtml",
-              "RelativeToolTip": "HeatExchangeApp\\Views\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "HeatExchangeApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "HeatExchangeApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAA4BAAAAAAAAAAAAAO8AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-24T15:51:13.052Z",
+              "WhenOpened": "2025-12-20T19:33:34.046Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "HeatExchangeApp\\Views\\_ViewImports.cshtml",
@@ -243,6 +126,120 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp\\Controllers\\HomeController.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "HeatExchangeApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T19:32:59.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Program.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp\\Program.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Program.cs",
+              "RelativeToolTip": "HeatExchangeApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T19:18:58.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HeatExchangeCalculator.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Services\\HeatExchangeCalculator.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp.Core\\Services\\HeatExchangeCalculator.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Services\\HeatExchangeCalculator.cs",
+              "RelativeToolTip": "HeatExchangeApp.Core\\Services\\HeatExchangeCalculator.cs",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAQwHUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T19:25:56.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "JsonCalculationStorage.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Services\\JsonCalculationStorage.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp\\Services\\JsonCalculationStorage.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Services\\JsonCalculationStorage.cs",
+              "RelativeToolTip": "HeatExchangeApp\\Services\\JsonCalculationStorage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T19:25:18.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CalculationModels.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Models\\CalculationModels.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp.Core\\Models\\CalculationModels.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Models\\CalculationModels.cs",
+              "RelativeToolTip": "HeatExchangeApp.Core\\Models\\CalculationModels.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T19:16:21.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CalculationViewModel.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Models\\CalculationViewModel.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp\\Models\\CalculationViewModel.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Models\\CalculationViewModel.cs",
+              "RelativeToolTip": "HeatExchangeApp\\Models\\CalculationViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T19:21:16.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp\\Models\\ErrorViewModel.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "HeatExchangeApp\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-24T15:32:51.845Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Class1.cs",
+              "RelativeDocumentMoniker": "HeatExchangeApp.Core\\Class1.cs",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp.Core\\Class1.cs",
+              "RelativeToolTip": "HeatExchangeApp.Core\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-20T19:14:56.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "HeatExchangeApp\\Views\\_ViewStart.cshtml",
+              "ToolTip": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "HeatExchangeApp\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-24T15:51:13.052Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 13,
               "Title": "Privacy.cshtml",
               "DocumentMoniker": "E:\\\u041C\u0435\u0442\u0430\u043B\u043B\u044B\\HeatExchangeApp\\HeatExchangeApp\\Views\\Home\\Privacy.cshtml",
@@ -251,8 +248,7 @@
               "RelativeToolTip": "HeatExchangeApp\\Views\\Home\\Privacy.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-24T15:51:08.41Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-24T15:51:08.41Z"
             },
             {
               "$type": "Document",

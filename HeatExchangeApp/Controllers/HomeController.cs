@@ -43,7 +43,7 @@ namespace HeatExchangeApp.Web.Controllers
                     Gas = request.Gas,
                     Parameters = request.Parameters,
                     Name = request.Name,
-                    Description = $"Расчет по методике УрФУ. {result.Description}",
+                    Description = $"Расчет. {result.Description}",
                     Result = result,
                     CreatedAt = DateTime.Now
                 };
